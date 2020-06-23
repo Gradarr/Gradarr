@@ -1,13 +1,14 @@
 <?php
 
-require_once('../includes/class-usersDataSorter.php');
+require_once('../../includes/modules/sort/users.php');
 
-$data = file_get_contents("../usersData.json");
+$data = file_get_contents("exampleData.json");
 $data = json_decode($data);
 
 $options = [
   "other" => [
-    "className" => "ITA"
+    "className" => "ITA",
+    "academicYear" => 2,
   ],
 ];
 
