@@ -47,11 +47,21 @@ class UsersSort
       $search = true;
       foreach ($options as $key => $value) {
         if (array_key_exists($key, $person)) {
-          if (is_object($value)) {
-            $value = (array) $value;
-          }
+          if (is_object($person[$key])) {
+            $person[$key] = (array) $person[$key];
 
-          if ($person[$key] != $value) {
+            foreach ($value as $otherOptionKey => $otherOptionValue) {
+              if (!isset($person[$key][$otherOptionKey])) {
+                $search = false;
+                break;
+              } elseif ($person[$key][$otherOptionKey] != $otherOptionValue) {
+                $search = false;
+                break;
+              }
+            }
+
+          }
+          elseif ($person[$key] != $value) {
             $search = false;
             break;
           }
