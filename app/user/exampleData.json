@@ -1,0 +1,105 @@
+{
+  "result": {
+    "data": [
+      {
+        "id": 1,
+        "birthday": "28/05/1999",
+        "name": "Aronas",
+        "other": {
+          "className": "ITA",
+          "classTeacher": 1
+        },
+        "surname": "Payne",
+        "type": "teacher"
+      },
+      {
+        "id": 14,
+        "birthday": "12/10/1999",
+        "name": "Mae",
+        "other": null,
+        "surname": "Ray",
+        "type": "teacher"
+      },
+      {
+        "id": 9,
+        "birthday": "06/06/2000",
+        "name": "Dean",
+        "other": {
+          "className": "ITB",
+          "classTeacher": 2
+        },
+        "surname": "Huff",
+        "type": "teacher"
+      },
+      {
+        "id": 8,
+        "birthday": "03/07/2000",
+        "name": "Geralt",
+        "other": {
+          "academicYear": 1,
+          "className": "ITA"
+        },
+        "surname": "Dixon",
+        "type": "student"
+      },
+      {
+        "id": 6,
+        "birthday": "30/07/2001",
+        "name": "Jonathan",
+        "other": null,
+        "surname": "Weber",
+        "type": "cleaner"
+      },
+      {
+        "id": 4,
+        "birthday": "25/10/2001",
+        "name": "Patryk",
+        "other": null,
+        "surname": "Mayer",
+        "type": "cleaner"
+      },
+      {
+        "id": 3,
+        "birthday": "11/12/2001",
+        "name": "Edie",
+        "other": null,
+        "surname": "Warner",
+        "type": "cleaner"
+      },
+      {
+        "id": 16,
+        "birthday": "27/01/2002",
+        "name": "Zahid",
+        "other": {
+          "academicYear": 2,
+          "className": "ITB"
+        },
+        "surname": "Odom",
+        "type": "student"
+      },
+      {
+        "id": 10,
+        "birthday": "22/02/2004",
+        "name": "Eman",
+        "other": {
+          "academicYear": 1,
+          "className": "ITA"
+        },
+        "surname": "Dickerson",
+        "type": "student"
+      },
+      {
+        "id": 5,
+        "birthday": "13/06/2004",
+        "name": "Lilly-Grace",
+        "other": {
+          "academicYear": 1,
+          "className": "ITA"
+        },
+        "surname": "Dotson",
+        "type": "student"
+      }
+    ],
+    "error": null
+  }
+}
