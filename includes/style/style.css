@@ -1,0 +1,25 @@
+:root {
+  --grey: rgb(71, 73, 70); /* menu a nadpisy */
+  --white: rgb(255, 255, 255); /* text v top_baru a navigaci, pozadí */
+  --light-grey: rgb(242, 243, 247); /* pozadí */
+  --black: rgb(0, 0, 0);
+  --grey-borders: rgb(231, 231, 231);
+  --menu-hover: #DB4858; /* další možnost #4BB5F0, #fa983a, #DB4858, #78e08f, #20bf6b, #4cd137, #fff200, #FAA275, #8338ec*/
+  --menu-logo-color: white;
+  --menu-subheader-color: #E2E2E2;
+  --menu-item-color: #A9A9A9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Baloo Chettan 2', cursive;
+}
+html {
+  scroll-behavior: smooth;
+  --html-width: 100%;
+  width: var(--html-width); /* view width */
+  min-height: 100%;
+  background-color: #343350;
+  display: table;
+}
