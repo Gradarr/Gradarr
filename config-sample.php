@@ -35,11 +35,11 @@ define('DB_PASSWORD', 'password_here');
 define('DB_HOST', 'localhost');
 
 /** Gradarr's table prefix */
-define('DB_PREFIX', "gr");
+define('DB_PREFIX', 'gr');
 
 /* Other */
 
 /** Website locale */
-define('Locale', "en");
+define('LOCALE', 'en');
 
 ?>

@@ -1,20 +1,21 @@
 <?php
 
+
 if (!defined('ABSPATH')) {
-  define('ABSPATH', __DIR__ . '/');
+  define('ABSPATH', __DIR__ . '\\');
 }
 
-if (!file_exists(ABSPATH . "config.php")) {
-  $configSampleFile = fopen(ABSPATH . "config-sample.php", "r") OR die("Unable to read config-sample.php!");
-  $configSampleFileContents = fread($configSampleFile, filesize(ABSPATH . "config-sample.php"));
-  fclose($configSampleFile);
+include_once ABSPATH . 'includes/lib.php';
 
-  $configFile = fopen("config.php", "w") OR die("Unable to create config.php!");
-  fwrite($configFile, $configSampleFileContents);
-  fclose($configFile);
-  unset($configSampleFileContents);
+
+
+if (!file_exists(ABSPATH . 'config.php')) {
+	require_once ABSPATH . 'install.php';
 }
 
-require_once(ABSPATH . 'load.php');
+require_once ABSPATH . 'load.php';
+
+
+
 
 ?>
