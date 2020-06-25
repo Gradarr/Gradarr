@@ -1,19 +1,22 @@
-<?php 
+<?php
 
-	class MySQLConnector
-	{
-		
-		private function __construct(){}
+class MySQLConnector
+{
 
-		static private function connect($name, $user, $password, $host)
-		{
-			# code...
-		}
+  private function __construct(){
+
+  }
+
+  static private function connect($name, $user, $password, $host)
+  {
+    # code...
+  }
 
 
-		static public function tryConnect($loginDetails)
-		{
+  static public function tryConnect($loginDetails)
+  {
 
-		}
-	}
+  }
+}
+
 ?>

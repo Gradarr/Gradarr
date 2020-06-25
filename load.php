@@ -1,5 +1,5 @@
 <?php
 
-	echo "string";
+require_once("./includes/structure/head.php");
 
 ?>

@@ -1,21 +1,11 @@
 <?php
 
+require_once('includes/lib.php');
 
-if (!defined('ABSPATH')) {
-  define('ABSPATH', __DIR__ . '\\');
+if (!file_exists('config.php')) {
+  require_once('install.php');
 }
 
-include_once ABSPATH . 'includes/lib.php';
-
-
-
-if (!file_exists(ABSPATH . 'config.php')) {
-	require_once ABSPATH . 'install.php';
-}
-
-require_once ABSPATH . 'load.php';
-
-
-
+require_once('load.php');
 
 ?>
