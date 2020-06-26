@@ -6,6 +6,7 @@ $error = '';
 
 if (!empty($_POST)) {
   if (!empty($_POST['db_name']) AND !empty($_POST['db_user']) AND !empty($_POST['db_host']) AND !empty($_POST['db_prefix']) AND !empty($_POST['lang']) AND isset($_POST['db_password'])) {
+
     $configOptions = [
       'DB_NAME'     => $_POST['db_name'],
       'DB_USER'     => $_POST['db_user'],
@@ -14,16 +15,22 @@ if (!empty($_POST)) {
       'DB_PREFIX'   => $_POST['db_prefix'],
       'LOCALE'      => $_POST['lang']
     ];
+
     $status = createConfigFile($configOptions);
 
-    if ($status == True) {
+    if (is_bool($status) AND $status == True) {
+
       header('location: index.php');
       exit;
+
     } else {
+
       $error = $status;
     }
   }
 }
+
+
 
 if (!file_exists('config.php')) { ?>
 <!DOCTYPE html>

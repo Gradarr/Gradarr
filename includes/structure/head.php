@@ -1,6 +1,6 @@
 <?php
 
-$path = dirname(__FILE__) . '/../';
+$path = $_SERVER["REQUEST_URI"];
 
 ?>
 <meta charset="utf-8">
@@ -8,7 +8,7 @@ $path = dirname(__FILE__) . '/../';
 <meta name="description" content="Gradarr">
 <title>Gradarr</title>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?= $path ?>style/style.css">
+<link rel="stylesheet" href="<?= $path ?>includes/style/style.css">
 <noscript>
 For this website to function properly, you need to have JavaScript turned on.
 </noscript>
