@@ -2,7 +2,6 @@
 
 $includesPath = dirname(__FILE__) . '/';
 
-
 //////////////
 //ALL FILES //
 //////////////
@@ -16,8 +15,7 @@ require_once('modules/database/MySQLConnector.php');
 //////////////
 
 function getStylesheetUrl($file = "") {
-  global $includesPath;
-  return $includesPath . "style/" . $file;
+  return $_SERVER["REQUEST_URI"] . "includes/style/" . $file;
 }
 
 /**
@@ -57,11 +55,11 @@ function createConfigFile($options) {
     'host'     => $options['DB_HOST']
   ];
 
-  // $valid = MySQLConnector::tryConnect();
-  //
-  // if ($valid == False) {
-  //   return 'Wrong database login details';
-  // }
+  $valid = MySQLConnector::tryConnect($dbOptions);
+  
+  if (!is_bool($valid)) {
+    return $valid;
+  }
 
   $status = file_put_contents($includesPath . '../config.php', $configSampleContents);
 

@@ -9,5 +9,4 @@ if (!file_exists('config.php')) {
 $currentPage = "";
 
 require_once('load.php');
-
 ?>
