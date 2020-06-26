@@ -13,13 +13,12 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Baloo Chettan 2', cursive;
 }
+
 html {
   scroll-behavior: smooth;
   --html-width: 100%;
   width: var(--html-width); /* view width */
   min-height: 100%;
-  background-color: #343350;
   display: table;
 }

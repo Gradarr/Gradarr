@@ -30,14 +30,14 @@ if (!empty($_POST)) {
   }
 }
 
+if (!file_exists('config.php')) {
+  $currentPage = "Installation"; ?>
 
-
-if (!file_exists('config.php')) { ?>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gradarr - Install</title>
-    <link rel="stylesheet" href="includes/style/install.css">
+    <?php require_once("includes/structure/head.php"); ?>
+    <link rel="stylesheet" href="includes/style/components/install.css">
   </head>
   <body>
     <div id="mainMenu">
@@ -68,11 +68,11 @@ if (!file_exists('config.php')) { ?>
             </div>
             <div>
               <label>
-                Database Host
+                Host
                 <input type="text" name="db_host" required="true" value="<?= (!empty($_POST['db_host'])) ? $_POST['db_host'] : '' ?>">
               </label>
               <label>
-                Table Prefix
+                Database table prefix
                 <input type="text" name="db_prefix" required="true" value="<?= (!empty($_POST['db_prefix'])) ? $_POST['db_prefix'] : 'gr_' ?>">
               </label>
             </div>
@@ -91,8 +91,12 @@ if (!file_exists('config.php')) { ?>
       </form>
       </div>
     </div>
+    <footer>
+      <?php require_once("./includes/structure/footer.php"); ?>
+    </footer>
   </body>
 </html>
+
 <?php
   exit;
 } else {
