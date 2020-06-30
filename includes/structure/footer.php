@@ -1,4 +1,4 @@
-<div>
+<div id='footer_inner'>
   <p>
     This is an open-source project. Visit
     <a href="https://gradarr.github.io">this</a>
