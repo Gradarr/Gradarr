@@ -8,6 +8,7 @@ $includesPath = dirname(__FILE__) . '/';
 
 require_once('modules/sort/users.php');
 require_once('modules/database/MySQLConnector.php');
+require_once('modules/forms/inputs.php');
 
 
 //////////////
@@ -56,7 +57,7 @@ function createConfigFile($options) {
   ];
 
   $valid = MySQLConnector::tryConnect($dbOptions);
-  
+
   if (!is_bool($valid)) {
     return $valid;
   }

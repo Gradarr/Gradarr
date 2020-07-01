@@ -53,25 +53,15 @@ if (!file_exists('config.php')) {
               <hr size="1" color="black" noshade>
               <!-- <div class="line"></div> -->
               <div>
-                <i class="fas fa-user"></i>
-                <label>
-                  Database name
-                  <input type="text" name="db_name" required="true" value="<?= (!empty($_POST['db_name'])) ? $_POST['db_name'] : "" ?>">
-                </label>
-                <label>
-                  Username
-                  <input type="text" name="db_user" required="true" value="<?= (!empty($_POST['db_user'])) ? $_POST['db_user'] : '' ?>">
-                </label>
-                <label>
-                  Password
-                  <input type="password" name="db_password" autocomplete="false" value="<?= (!empty($_POST['db_password'])) ? $_POST['db_password'] : '' ?>">
-                </label>
+                <?php
+                generateInput("text", "db_name", "Database name", null, $_POST['db_name'], ["required"]);
+                generateInput("text", "db_user", "Database user", "face", $_POST['db_user'], ["required"]);
+                generateInput("password", "db_password", "Database password", "face", $_POST['db_password'], ["autocomplete='false'"]);
+                ?>
+
               </div>
               <div>
-                <label>
-                  Host
-                  <input type="text" name="db_host" required="true" value="<?= (!empty($_POST['db_host'])) ? $_POST['db_host'] : '' ?>">
-                </label>
+                <?= generateInput("text", "db_host", "Host", "face", $_POST['db_host'], ["required"]); ?>
                 <label>
                   Database table prefix
                   <input type="text" name="db_prefix" required="true" value="<?= (!empty($_POST['db_prefix'])) ? $_POST['db_prefix'] : 'gr_' ?>">
