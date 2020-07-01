@@ -54,18 +54,12 @@ if (!file_exists('config.php')) {
               <!-- <div class="line"></div> -->
               <div>
                 <?php
-                generateInput("text", "db_name", "Database name", null, $_POST['db_name'], ["required"]);
-                generateInput("text", "db_user", "Database user", "face", $_POST['db_user'], ["required"]);
-                generateInput("password", "db_password", "Database password", "face", $_POST['db_password'], ["autocomplete='false'"]);
+                generateInput("text", "db_name", "Database name", "dns", $_POST['db_name'], ["required"]);
+                generateInput("text", "db_user", "Database user", "account_circle", $_POST['db_user'], ["required"]);
+                generateInput("password", "db_password", "Database password", "vpn_key", $_POST['db_password'], ["autocomplete='false'"]);
+                generateInput("text", "db_host", "Host", "home", $_POST['db_host'], ["required"]);
+                generateInput("text", "db_prefix", "Database table prefix", null, (!empty($_POST['db_prefix'])) ? $_POST['db_prefix'] : 'gr_', ["required"]);
                 ?>
-
-              </div>
-              <div>
-                <?= generateInput("text", "db_host", "Host", "face", $_POST['db_host'], ["required"]); ?>
-                <label>
-                  Database table prefix
-                  <input type="text" name="db_prefix" required="true" value="<?= (!empty($_POST['db_prefix'])) ? $_POST['db_prefix'] : 'gr_' ?>">
-                </label>
               </div>
             </div>
             <div>
