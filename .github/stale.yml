@@ -1,0 +1,21 @@
+# Number of days of inactivity before an issue becomes stale
+daysUntilStale: 1
+# Number of days of inactivity before a stale issue is closed
+daysUntilClose: 30
+# Issues with these labels will never be considered stale
+exemptLabels:
+  - bug
+# Label to use when marking an issue as stale
+staleLabel: stale
+# Comment to post when marking an issue as stale. Set to `false` to disable
+markComment: >
+  This issue has gone 20 days without comment. To avoid abandoned issues, it will be closed in 30 additional days if there are no new comments.
+  
+  + If the issue described in this thread also affects you, please, comment confirming so.
+  + If you are the author of this thread and the problem has been already solved in one of latest releases, please, close this issue.
+  + If you have valid information about this problem that has not been described here before, please let us know! :)
+  
+  This bot exists to prevent issues from becoming stale and forgotten.
+  Thanks!
+# Comment to post when closing a stale issue. Set to `false` to disable
+closeComment: false
